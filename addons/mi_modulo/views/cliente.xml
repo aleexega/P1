@@ -1,0 +1,37 @@
+<odoo>
+    <!-- Vista de formulario para Cliente -->
+    <record id="view_form_cliente" model="ir.ui.view">
+        <field name="name">cliente.form</field>
+        <field name="model">mi.modulo.cliente</field>
+        <field name="arch" type="xml">
+            <form string="Cliente">
+                <group>
+                    <field name="name" placeholder="Ingrese el nombre del cliente"/>
+                    <field name="correo" placeholder="Ingrese el correo del cliente"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de lista para Clientes -->
+    <record id="view_tree_cliente" model="ir.ui.view">
+        <field name="name">cliente.tree</field>
+        <field name="model">mi.modulo.cliente</field>
+        <field name="arch" type="xml">
+            <tree string="Clientes">
+                <field name="name"/>
+                <field name="correo"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción para Clientes -->
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">mi.modulo.cliente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para Cliente -->
+    <menuitem id="mi_modulo_menu_cliente" name="Clientes" parent="mi_modulo_menu" action="action_cliente"/>
+</odoo>

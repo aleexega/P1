@@ -12,8 +12,15 @@ services:
       - "8300:8069"
     volumes:
       - odoo-data:/var/lib/odoo
-      - ./config:/etc/odoo
+      - ./config:/etc/odoo    
       - ./addons:/mnt/extra-addons
+
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo
+      - DB_FILTER=titanblock
+      
 
   db:
     image: postgres:16.0
@@ -29,6 +36,5 @@ services:
 
 volumes:
   odoo-data:
-  db-data:    
-
-      
+  db-data:      
+  
