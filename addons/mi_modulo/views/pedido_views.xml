@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Vista de formulario para pedidos -->
+    <record id="view_pedido_form" model="ir.ui.view">
+        <field name="name">mi_modulo.pedido.form</field>
+        <field name="model">mi_modulo.pedido</field>
+        <field name="arch" type="xml">
+            <form string="Pedido">
+                <sheet>
+                    <group>
+                        <field name="cliente_id"/>
+                        <field name="producto_ids"/>
+                        <field name="fecha"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista de lista para pedidos -->
+    <record id="view_pedido_tree" model="ir.ui.view">
+        <field name="name">mi_modulo.pedido.tree</field>
+        <field name="model">mi_modulo.pedido</field>
+        <field name="arch" type="xml">
+            <tree string="Pedidos">
+                <field name="cliente_id"/>
+                <field name="fecha"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción para la vista de pedidos -->
+    <record id="action_pedido" model="ir.actions.act_window">
+        <field name="name">Pedidos</field>
+        <field name="res_model">mi_modulo.pedido</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_pedido_tree"/>
+    </record>
+
+    <!-- Menú para la gestión de pedidos -->
+    <menuitem id="menu_pedido" name="Pedidos" parent="menu_mi_modulo" action="action_pedido"/>
+</odoo>

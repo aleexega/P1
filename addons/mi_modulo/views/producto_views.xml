@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_producto_form" model="ir.ui.view">
+        <field name="name">mi_modulo.producto.form</field>
+        <field name="model">mi_modulo.producto</field>
+        <field name="arch" type="xml">
+            <form string="Producto">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="precio"/>
+                        <field name="cantidad"/>
+                        <field name="categoria"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_producto_tree" model="ir.ui.view">
+        <field name="name">mi_modulo.producto.tree</field>
+        <field name="model">mi_modulo.producto</field>
+        <field name="arch" type="xml">
+            <tree string="Productos">
+                <field name="nombre"/>
+                <field name="precio"/>
+                <field name="cantidad"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
