@@ -1,8 +1,19 @@
-from odoo import models, fields
+# -*- coding: utf-8 -*-
 
-class MiModulo(models.Model):
-    _name = 'mi.modulo'  # Nombre técnico del modelo
-    _description = 'Mi primer modelo'
+# from odoo import models, fields, api
 
-    name = fields.Char(string="Nombre", required=True)
-    description = fields.Text(string="Descripción")
+
+# class mimodulo(models.Model):
+#     _name = 'mimodulo.mimodulo'
+#     _description = 'mimodulo.mimodulo'
+
+#     name = fields.Char()
+#     value = fields.Integer()
+#     value2 = fields.Float(compute="_value_pc", store=True)
+#     description = fields.Text()
+#
+#     @api.depends('value')
+#     def _value_pc(self):
+#         for record in self:
+#             record.value2 = float(record.value) / 100
+

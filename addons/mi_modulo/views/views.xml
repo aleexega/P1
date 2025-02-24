@@ -1,37 +1,60 @@
 <odoo>
-    <!-- Vista de Formulario -->
-    <record id="view_form_mi_modulo" model="ir.ui.view">
-        <field name="name">mi.modulo.form</field>
-        <field name="model">mi.modulo</field>
-        <field name="arch" type="xml">
-            <form string="Mi Módulo">
-                <group>
-                    <field name="name"/>
-                    <field name="description"/>
-                </group>
-            </form>
-        </field>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="mimodulo.list">
+      <field name="name">mimodulo list</field>
+      <field name="model">mimodulo.mimodulo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
     </record>
+-->
 
-    <!-- Vista de Árbol (Lista) -->
-    <record id="view_tree_mi_modulo" model="ir.ui.view">
-        <field name="name">mi.modulo.tree</field>
-        <field name="model">mi.modulo</field>
-        <field name="arch" type="xml">
-            <tree string="Mi Modulo">
-                <field name="name"/>
-                <field name="description"/>
-            </tree>
-        </field>
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="mimodulo.action_window">
+      <field name="name">mimodulo window</field>
+      <field name="res_model">mimodulo.mimodulo</field>
+      <field name="view_mode">tree,form</field>
     </record>
+-->
 
-    <!-- Acción para abrir el modelo -->
-    <record id="action_mi_modulo" model="ir.actions.act_window">
-        <field name="name">Mi Módulo</field>
-        <field name="res_model">mi.modulo</field>
-        <field name="view_mode">form,tree</field>
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="mimodulo.action_server">
+      <field name="name">mimodulo server</field>
+      <field name="model_id" ref="model_mimodulo_mimodulo"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
     </record>
+-->
 
-    <!-- Menú para acceder al modelo -->
-    <menuitem id="mi_modulo_menu" name="Mi Modulo" action="action_mi_modulo"/>
+    <!-- Top menu item -->
+<!--
+    <menuitem name="mimodulo" id="mimodulo.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="mimodulo.menu_1" parent="mimodulo.menu_root"/>
+    <menuitem name="Menu 2" id="mimodulo.menu_2" parent="mimodulo.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="mimodulo.menu_1_list" parent="mimodulo.menu_1"
+              action="mimodulo.action_window"/>
+    <menuitem name="Server to list" id="mimodulo" parent="mimodulo.menu_2"
+              action="mimodulo.action_server"/>
+-->
+  </data>
 </odoo>

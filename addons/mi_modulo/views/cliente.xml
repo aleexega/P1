@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Cliente</field>
+        <field name="res_model">tienda.deportes.cliente</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Creamos un Cliente.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_tree_cliente" model="ir.ui.view">
+        <field name="name">tienda.deportes.cliente.tree</field>
+        <field name="model">tienda.deportes.cliente</field>
+        <field name="arch" type="xml">
+            <tree string="Clientes">
+                <field name="name"/>
+                <field name="telefono"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_cliente" model="ir.ui.view">
+        <field name="name">tienda.deportes.cliente.form</field>
+        <field name="model">tienda.deportes.cliente</field>
+        <field name="arch" type="xml">
+            <form string="Cliente">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

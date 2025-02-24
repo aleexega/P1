@@ -1,9 +1,10 @@
 from odoo import models, fields
 
 class Pedido(models.Model):
-    _name = 'mi_modulo.pedido'
-    _description = 'Pedido de compra de un cliente'
-    
-    cliente_id = fields.Many2one('mi_modulo.cliente', string="Cliente")
-    producto_ids = fields.Many2many('mi_modulo.producto', string="Productos")
-    fecha = fields.Date(string="Fecha", default=fields.Date.today())
+    _name = "tienda.deportes.pedido"
+    _description = "Pedido de la Tienda de Deportes"
+
+    cliente_id = fields.Many2one("tienda.deportes.cliente", string="Cliente", required=True)
+    producto_ids = fields.Many2many("tienda.deportes.producto", string="Productos")
+    cantidad = fields.Integer(string="Cantidad", default=1)
+    fecha_pedido = fields.Date(string="Fecha del Pedido", required=True)

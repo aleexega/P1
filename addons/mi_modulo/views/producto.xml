@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_producto" model="ir.actions.act_window">
+        <field name="name">Producto</field>
+        <field name="res_model">tienda.deportes.producto</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Creamos un Producto.
+            </p>
+        </field>
+    </record>
+
+    <record id="view_tree_producto" model="ir.ui.view">
+        <field name="name">tienda.deportes.producto.tree</field>
+        <field name="model">tienda.deportes.producto</field>
+        <field name="arch" type="xml">
+            <tree string="Productos">
+                <field name="nombre"/>
+                <field name="precio"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_producto" model="ir.ui.view">
+        <field name="name">tienda.deportes.producto.form</field>
+        <field name="model">tienda.deportes.producto</field>
+        <field name="arch" type="xml">
+            <form string="Producto">
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="precio"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

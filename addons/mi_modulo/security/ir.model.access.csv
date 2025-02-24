@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mi_modulo_mi_modulo,mi_modulo.mi_modulo,model_mi_modulo_mi_modulo,base.group_user,1,1,1,1
+access_tienda_deportes_cliente,access_tienda_deportes_cliente,model_tienda_deportes_cliente,base.group_user,1,1,1,1
+access_tienda_deportes_producto,access_tienda_deportes_producto,model_tienda_deportes_producto,base.group_user,1,1,1,1
+access_tienda_deportes_pedido,access_tienda_deportes_pedido,model_tienda_deportes_pedido,base.group_user,1,1,1,1

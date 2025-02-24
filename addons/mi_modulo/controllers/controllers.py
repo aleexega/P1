@@ -2,21 +2,21 @@
 # from odoo import http
 
 
-# class MiModulo(http.Controller):
-#     @http.route('/mi_modulo/mi_modulo', auth='public')
+# class Mimodulo(http.Controller):
+#     @http.route('/mimodulo/mimodulo', auth='public')
 #     def index(self, **kw):
 #         return "Hello, world"
 
-#     @http.route('/mi_modulo/mi_modulo/objects', auth='public')
+#     @http.route('/mimodulo/mimodulo/objects', auth='public')
 #     def list(self, **kw):
-#         return http.request.render('mi_modulo.listing', {
-#             'root': '/mi_modulo/mi_modulo',
-#             'objects': http.request.env['mi_modulo.mi_modulo'].search([]),
+#         return http.request.render('mimodulo.listing', {
+#             'root': '/mimodulo/mimodulo',
+#             'objects': http.request.env['mimodulo.mimodulo'].search([]),
 #         })
 
-#     @http.route('/mi_modulo/mi_modulo/objects/<model("mi_modulo.mi_modulo"):obj>', auth='public')
+#     @http.route('/mimodulo/mimodulo/objects/<model("mimodulo.mimodulo"):obj>', auth='public')
 #     def object(self, obj, **kw):
-#         return http.request.render('mi_modulo.object', {
+#         return http.request.render('mimodulo.object', {
 #             'object': obj
 #         })
 

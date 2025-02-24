@@ -1,18 +1,31 @@
+# -*- coding: utf-8 -*-
 {
-    'name': 'Gestión de Clientes y Productos',
-    'version': '1.0',  
-    'author': 'Titan Block',  
-    'website': 'https://www.titanblock.com',
-    'depends': ['base', 'sale'], 
+    'name': "Elite Sports",
+
+    'summary': "Gestión de clientes, productos y pedidos en una tienda de deportes",
+
+    'description': """
+Módulo para gestionar clientes, productos y pedidos en una tienda de artículos deportivos.
+    """,
+
+    'author': "Alex",
+    'website': "https://www.elitesports.com",
+
+    'category': 'Ropa',
+    'version': '1.0',
+
+    # Módulos necesarios para que este funcione correctamente
+    'depends': ['base'],
+
+    # Archivos siempre cargados
     'data': [
-        'views/cliente_views.xml', 
-        'views/producto_views.xml', 
-        'views/pedido_views.xml',  
-        'security/ir.model.access.csv', 
-        'views/pedido_views.xml',
+        'security/ir.model.access.csv',
+        'views/cliente.xml',
+        'views/producto.xml',
+        'views/pedido.xml',
+        'views/menu.xml',
     ],
-    'installable': True,
-    'application': True,
-    'auto_install': False, 
-    'license': 'LGPL-3',
+
+    # Solo se carga en modo demostración
+    'demo': [],
 }

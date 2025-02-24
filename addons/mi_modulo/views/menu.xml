@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="tienda_deportes" name="Tienda Deportes" sequence="1"/>
+
+    <menuitem id="menu_productos" name="Productos" parent="tienda_deportes" action="action_producto"/>
+    <menuitem id="menu_clientes" name="Clientes" parent="tienda_deportes" action="action_cliente"/>
+    <menuitem id="menu_pedidos" name="Pedidos" parent="tienda_deportes" action="action_pedido"/>
+</odoo>
